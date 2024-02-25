@@ -1,0 +1,54 @@
+@import "../src/App.scss";
+
+.App-header{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        color: white;
+        margin: 1rem 0;
+        font-size: 3rem;
+    }
+
+    img{
+        height: 2rem;
+    }
+}
+
+.search__wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+
+    input{
+        width: 60vw;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: $secondary-color;
+        color: $text-color;
+        margin: 1rem 0;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        margin: 1rem ;
+
+    }
+
+    button:hover{
+        cursor: pointer;
+        border:none;
+        color: $text-color;
+    }
+}
