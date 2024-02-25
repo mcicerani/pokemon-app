@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './selectedPokemon.scss';
 
 function ShowPokemon({ selectedPokemon, hidePokemonDetails }) {
 

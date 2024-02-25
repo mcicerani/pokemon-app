@@ -1,15 +1,15 @@
 @import "../src/App.scss";
 
 
-.pokemonBig{
+.pokemon{
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
     padding: 1rem;
     border: 1px solid #ccc;
     color: $text-color;
-    width: 75vw;
-    height: auto;
+    width: 200px;
+    height: 300px;
     border-radius: 5%;
     box-shadow: 1px 1px 5px 1px #ccc;
     align-items: center;
@@ -71,27 +71,24 @@
         background-color: $card-color-flying;
     }
 
-    h2{
-        margin: 0.5rem 0;
-        text-transform: capitalize;
-        font-size: 2rem;
-    }
-
-    .pokemon__foto{
-        width: 300px;
-        height: 300px;
-        margin: 0;
-    }
-
     p{
-        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    h3{
         margin: 0.5rem 0;
         text-transform: capitalize;
     }
 
     .types{
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    .pokemon__foto{
+        width: 150px;
+        height: 150px;
         margin: 0;
     }
 

@@ -1,7 +1,7 @@
 import './App.scss';
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types'
 import ShowPokemon from './components/selectedPokemon';
+import Pokemon from './components/Pokemon';
 
 
 function App() {
@@ -13,18 +13,11 @@ function App() {
   }, []);
 
   const fetchPokemon = async () => {
-    try {
       const url = `https://pokeapi.co/api/v2/pokemon?limit=151`;
       const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error('Failed to fetch Pokemon');
-      }
       const data = await res.json();
       const pokemon = data.results.map(async (result, index) => {
         const res = await fetch(result.url);
-        if (!res.ok) {
-          throw new Error('Failed to fetch Pokemon details');
-        }
         const pokemonData = await res.json();
         return {
           ...result,
@@ -42,42 +35,15 @@ function App() {
       });
       const pokemonList = await Promise.all(pokemon);
       setPokemonList(pokemonList);
-    } catch (error) {
-      console.error(error);
-    }
   }
 
   const handlePokemonClick = (pokemon) => {
     setSelectedPokemon(pokemon);
-    console.log(pokemon);
   }
 
   const hidePokemonDetails = () => {
     setSelectedPokemon(null);
-    console.log(selectedPokemon);
 }
-
-
-//crea props per il componente ShowPokemon dal pokemon selezionato
-  ShowPokemon.propTypes = {
-    selectedPokemon: PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      image: PropTypes.string,
-      types: PropTypes.arrayOf(PropTypes.string),
-      height: PropTypes.number,
-      weight: PropTypes.number,
-      abilities: PropTypes.arrayOf(PropTypes.string),
-      stats: PropTypes.arrayOf(
-        PropTypes.shape({
-          name: PropTypes.string,
-          value: PropTypes.number
-        })
-      )
-    })
-  };
-
-
 
 
     return (
@@ -85,24 +51,12 @@ function App() {
         {selectedPokemon ? (
           <ShowPokemon selectedPokemon={selectedPokemon} hidePokemonDetails={hidePokemonDetails}/>
         ) : (
-          <div className='pokemon__container'>
-            {pokemonList.map(poke => (
-              <div className={`pokemon ${poke.types[0]}`} id={poke.name} key={poke.id} onClick={() => handlePokemonClick(poke)}>
-                <p>#{poke.id}</p>
-                <p>
-                  {poke.types.map((type, index) => (
-                    <img src={`../src/assets/${type}.svg`} alt={type} key={index} className='types' />
-                  ))}
-                </p>
-                <img className='pokemon__foto' src={poke.image} alt={poke.name} />
-                <h3 className='name'>{poke.name}</h3>
-              </div>
-            ))}
-          </div>
+          <Pokemon pokemonList={pokemonList} handlePokemonClick={handlePokemonClick} />
         )}
       </div>
     );
   }
+
 
 
 
