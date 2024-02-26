@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import './ShowPokemon.scss';
 import StatsBar from './StatsBar';
+import PokemonDetails from './PokemonDetails';
+
 
 function ShowPokemon({ selectedPokemon, hidePokemonDetails }) {
 
@@ -10,18 +12,16 @@ function ShowPokemon({ selectedPokemon, hidePokemonDetails }) {
                 <p>#{selectedPokemon?.id}</p>
                 <p>
                 {selectedPokemon.types.map((type, index) => (
-                    <img src={`../src/assets/${type}.svg`} alt={type} key={index} className='types' />
+                    <img src={`../src/assets/${type}.svg`} alt={type} key={index} className={`types ${type}`} />
                 ))}
                 </p>
                 <img className='pokemon__foto' src={selectedPokemon?.image} alt={selectedPokemon?.name} />
                 <h2>{selectedPokemon?.name}</h2>
             </div>
-            <div className='pokemon__details'>
-                <p>Type: {selectedPokemon?.types.join(', ')}</p>
-                <p>Height: {selectedPokemon?.height/10}m</p>
-                <p>Weight: {selectedPokemon?.weight/10}kg</p>
-                <p>Abilities: {selectedPokemon?.abilities.join(', ')}</p>
+            <div>
+                <PokemonDetails selectedPokemon={selectedPokemon} />  
                 <StatsBar selectedPokemon={selectedPokemon} />
+
             </div>
         </div>
     );

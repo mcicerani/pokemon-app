@@ -1,4 +1,6 @@
 @import '../src/components/Colors.scss';
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+                
 
 .App-header{
     display: flex;
@@ -9,13 +11,16 @@
     align-items: center;
 
     h1{
-        color: white;
+        font-family: 'Pokemon Solid', sans-serif;
+        color: #ffcb05;
         margin: 1rem 0;
-        font-size: 3rem;
+        font-size: 4rem;
+        text-shadow: -5px 0px 0px #1d2c5e;
     }
 
     img{
-        height: 2rem;
+        height: 3rem;
+        margin: -0.5rem 1rem;
     }
 }
 

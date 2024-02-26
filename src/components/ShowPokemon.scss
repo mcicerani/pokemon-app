@@ -11,9 +11,7 @@
     width: 300px;
     height: auto;
     border-radius: 5%;
-    box-shadow: 1px 1px 5px 1px #ccc;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 1px 1px 5px 1px #000;
     cursor: pointer;
 
     h2{
@@ -35,27 +33,116 @@
     }
 
     .types{
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 50%;
         margin: 0;
-        filter: brightness(0) saturate(100%);
-        opacity: 0.75;
+
+        &.normal{
+            background-color: $card-color-normal;
+        }
+
+        &.fire{
+            background-color: $card-color-fire;
+        }
+
+        &.water{
+            background-color: $card-color-water;
+        }
+
+        &.electric{
+            background-color: $card-color-electric;
+        }
+
+        &.grass{
+            background-color: $card-color-grass;
+        }
+
+        &.ice{
+            background-color: $card-color-ice;
+        }
+
+        &.fighting{
+            background-color: $card-color-fighting;
+        }
+
+        &.poison{
+            background-color: $card-color-poison;
+        }
+
+        &.ground{
+            background-color: $card-color-ground;
+        }
+
+        &.flying{
+            background-color: $card-color-flying;
+        }
+
+        &.psychic{
+            background-color: $card-color-psychic;
+        }
+
+        &.bug{
+            background-color: $card-color-bug;
+        }
+        
+        &.rock{
+            background-color: $card-color-rock;
+        }
+
+        &.ghost{
+            background-color: $card-color-ghost;
+        }
+
+        &.dragon{
+            background-color: $card-color-dragon;
+        }
+
+        &.dark{
+            background-color: $card-color-dark;
+        }
+
+        &.steel{
+            background-color: $card-color-steel;
+        }
+
+        &.fairy{
+            background-color: $card-color-fairy;
+        }
     }
 
 }
 
 .pokemon__details{
-    color: $text-color;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 300px;
     height: auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #000;
+    background-color: $primary-color;
+
+    p{
+        padding: 0;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        width: 250px;
+        color: $secondary-color;
+        text-align: left;
+        text-transform: capitalize;
+    }
+}
+.stats{
+    text-align: left;
+    margin: 0.5rem auto;
+    width: 300px;
+}
+
+.bold{
     text-transform: capitalize;
-    text-align: justify;
-    margin: 0 2rem;
-    padding: 3rem;
-    border: 3px solid;
-    border-top-color: #000; // colore scuro
-    border-left-color: #000; // colore scuro
-    border-right-color: grey;
-    border-bottom-color: grey;
-    background-color: #dbdada;
+    font-weight: bold;
 }

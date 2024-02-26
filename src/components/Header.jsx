@@ -28,7 +28,11 @@ function Header() {
     return (
         <React.Fragment>
             <header className="App-header">
-                <h1><img src="../src/assets/pokèball.svg" alt="pokè ball"></img>Pokèdex</h1>
+                <h1>
+                    <img src="../src/assets/pokèball.svg" alt="pokè ball"></img>
+                    Pokèdex
+                    <img src="../src/assets/pokèball.svg" alt="pokè ball"></img>
+                </h1>
             </header>
             <div className='search__wrap'>
                 <input name='Pokemon_search' type='text' placeholder='Search Pokemon' onChange={handleChange} />

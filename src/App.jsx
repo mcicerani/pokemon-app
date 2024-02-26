@@ -12,7 +12,7 @@ function App() {
     fetchPokemon();
   }, []);
 
-  const fetchPokemon = async () => {
+    const fetchPokemon = async () => {
       const url = `https://pokeapi.co/api/v2/pokemon?limit=151`;
       const res = await fetch(url);
       const data = await res.json();
@@ -27,10 +27,11 @@ function App() {
           abilities: pokemonData.abilities.map(ability => ability.ability.name),
           height: pokemonData.height,
           weight: pokemonData.weight,
+          species: pokemonData.species.url,
           stats: pokemonData.stats.map(stat => ({
             name: stat.stat.name,
             value: stat.base_stat
-          }))
+          })),
         };
       });
       const pokemonList = await Promise.all(pokemon);

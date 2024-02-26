@@ -11,7 +11,7 @@
     width: 200px;
     height: 300px;
     border-radius: 5%;
-    box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow: 1px 1px 5px 1px #000;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -28,11 +28,88 @@
     .types{
         width: 20px;
         height: 20px;
+        padding: 5px;
+        border-radius: 50%;
         margin: 0;
-        filter: brightness(0) saturate(100%);
-        opacity: 0.75;
+
+
+        &.normal{
+            background-color: $card-color-normal;
+        }
+
+        &.fire{
+            background-color: $card-color-fire;
+        }
+
+        &.water{
+            background-color: $card-color-water;
+        }
+
+        &.electric{
+            background-color: $card-color-electric;
+        }
+
+        &.grass{
+            background-color: $card-color-grass;
+        }
+
+        &.ice{
+            background-color: $card-color-ice;
+        }
+
+        &.fighting{
+            background-color: $card-color-fighting;
+        }
+
+        &.poison{
+            background-color: $card-color-poison;
+        }
+
+        &.ground{
+            background-color: $card-color-ground;
+        }
+
+        &.flying{
+            background-color: $card-color-flying;
+        }
+
+        &.psychic{
+            background-color: $card-color-psychic;
+        }
+
+        &.bug{
+            background-color: $card-color-bug;
+        }
+        
+        &.rock{
+            background-color: $card-color-rock;
+        }
+
+        &.ghost{
+            background-color: $card-color-ghost;
+        }
+
+        &.dragon{
+            background-color: $card-color-dragon;
+        }
+
+        &.dark{
+            background-color: $card-color-dark;
+        }
+
+        &.steel{
+            background-color: $card-color-steel;
+        }
+
+        &.fairy{
+            background-color: $card-color-fairy;
+        }
+
+        
+        
 
     }
+
 
     .pokemon__foto{
         width: 150px;

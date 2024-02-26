@@ -1,22 +1,23 @@
-import React from "react";
 import PropTypes from 'prop-types'
+import './StatsBar.scss';
 
 function StatsBar({ selectedPokemon }) {
+
     return (
-        <React.Fragment>
+        <div className='stats__container'>
             {selectedPokemon.stats.map((stat) => (
                 <div key={stat.name}>
-                    <div>{stat.name}:{stat.value}</div>
+                    <div className="stats"><span className="bold">{stat.name}:</span> {stat.value}</div>
                     <div
                         style={{
-                            width: `${(stat.value / 150) * 100}%`,
-                            backgroundColor: stat.value > 89 ? "green" : stat.value > 29 ? "orange" : "red",
+                            width: `${(stat.value / 250) * 100}%`,
+                            backgroundColor: stat.value > 89 ? "green" : stat.value > 29 ? "yellow" : "orange",
                             height: "10px",
                         }}
                     ></div>
                 </div>
             ))}
-        </React.Fragment>
+        </div>
     );
 }
 
