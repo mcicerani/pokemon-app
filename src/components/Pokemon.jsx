@@ -5,11 +5,11 @@ function Pokemon({pokemonList, handlePokemonClick}) {
     return (
         <div className='pokemon__container'>
         {pokemonList.map(poke => (
-          <div className={`pokemon ${poke.types[0]}`} id={poke.name} key={poke.id} onClick={() => handlePokemonClick(poke)}>
+            <div className={`pokemon ${poke.types.map(type => type).join(' ')}`} id={poke.name} key={poke.id} onClick={() => handlePokemonClick(poke)}>
             <p>#{poke.id}</p>
             <p>
               {poke.types.map((type, index) => (
-                <img src={`../src/assets/${type}.svg`} alt={type} key={index} className='types' />
+                <img src={`../src/assets/${type}.svg`} alt={type} key={index} className='types'/>
               ))}
             </p>
             <img className='pokemon__foto' src={poke.image} alt={poke.name} />

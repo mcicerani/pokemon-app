@@ -32,6 +32,183 @@
         align-items: center;
         margin: 1rem 0;
         padding: 1rem;
-        border: 1px solid #ccc;    
+        box-shadow: 1px 1px 5px 1px #000;
+
+        .pokemon, .pokemonBig{
+        
+            &.grass {
+                background: linear-gradient(135deg, $card-color-grass, white, $card-color-grass);
+                
+                &.poison{
+                    background: linear-gradient(135deg, $card-color-grass, white, $card-color-poison);
+                }
+        
+                &.psychic{
+                    background: linear-gradient(135deg, $card-color-grass, white, $card-color-psychic);
+                }
+            }
+        
+            &.fire {
+                background: linear-gradient(135deg, $card-color-fire, white, $card-color-fire);
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-fire, white, $card-color-flying);
+                }
+            }
+        
+            &.water {
+                background: linear-gradient(135deg, $card-color-water, white, $card-color-water);
+        
+                &.fighting{
+                    background: linear-gradient(135deg, $card-color-water, white, $card-color-fighting);
+                }
+        
+                &.poison{
+                    background: linear-gradient(135deg, $card-color-water, white, $card-color-poison);
+                }
+        
+                &.psychic{
+                    background: linear-gradient(135deg, $card-color-water, white, $card-color-psychic);
+                }
+        
+                &.ice{
+                    background: linear-gradient(135deg, $card-color-water, white, $card-color-ice);
+                }
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-water, white, $card-color-flying);
+                }
+            }
+        
+            &.bug {
+                background: linear-gradient(135deg, $card-color-bug, white, $card-color-bug);
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-bug, white, $card-color-flying);
+                }
+        
+                &.poison{
+                    background: linear-gradient(135deg, $card-color-bug, white, $card-color-poison);
+                }
+        
+                &.grass{
+                    background: linear-gradient(135deg, $card-color-bug, white, $card-color-grass);
+                }
+            }
+        
+            &.normal {
+                background: linear-gradient(135deg, $card-color-normal, white, $card-color-normal);
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-normal, white, $card-color-flying);
+                }
+        
+                &.fairy{
+                    background: linear-gradient(135deg, $card-color-normal, white, $card-color-fairy);
+                }
+            }
+        
+            &.poison {
+                background: linear-gradient(135deg, $card-color-poison, white, $card-color-poison);
+        
+                &.ground{
+                    background: linear-gradient(135deg, $card-color-poison, white, $card-color-ground);
+                }
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-poison, white, $card-color-flying);
+                }
+                
+            }
+        
+            &.electric {
+                background: linear-gradient(135deg, $card-color-electric, white, $card-color-electric);
+        
+                &.steel{
+                    background: linear-gradient(135deg, $card-color-electric, white, $card-color-steel);
+                }
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-electric, white, $card-color-flying);
+                }
+            }
+        
+            &.ground {
+                background: linear-gradient(135deg, $card-color-ground, white, $card-color-ground);
+            }
+        
+            &.fairy {
+                background: linear-gradient(135deg, $card-color-fairy, white, $card-color-fairy);
+            }
+        
+            &.fighting {
+                background: linear-gradient(135deg, $card-color-fighting, white, $card-color-fighting);
+            }
+        
+            &.psychic {
+                background: linear-gradient(135deg, $card-color-psychic, white, $card-color-psychic);
+        
+                &.fairy{
+                    background: linear-gradient(135deg, $card-color-psychic, white, $card-color-fairy);
+                }
+            }
+        
+            &.rock {
+                background: linear-gradient(135deg, $card-color-rock, white, $card-color-rock);
+        
+                &.ground{
+                    background: linear-gradient(135deg, $card-color-rock, white, $card-color-ground);
+                }
+        
+                &.water{
+                    background: linear-gradient(135deg, $card-color-rock, white, $card-color-water);
+                }
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-rock, white, $card-color-flying);
+                }
+            }
+        
+            &.ghost {
+                background: linear-gradient(135deg, $card-color-ghost, white, $card-color-ghost);
+        
+                &.poison{
+                    background: linear-gradient(135deg, $card-color-ghost, white, $card-color-poison);
+                }
+            }
+        
+            &.ice {
+                background: linear-gradient(135deg, $card-color-ice, white, $card-color-ice);
+        
+                &.psychic{
+                    background: linear-gradient(135deg, $card-color-ice, white, $card-color-psychic);
+                }
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-ice, white, $card-color-flying);
+                }
+            }
+        
+            &.dragon {
+                background: linear-gradient(135deg, $card-color-dragon, white, $card-color-dragon);
+        
+                &.flying{
+                    background: linear-gradient(135deg, $card-color-dragon, white, $card-color-flying);
+                }
+            }
+        
+            &.dark {
+                background: linear-gradient(135deg, $card-color-dark, white, $card-color-dark);
+            }
+        
+            &.steel {
+                background: linear-gradient(135deg, $card-color-steel, white, $card-color-steel);
+            }
+        
+            &.flying {
+                background: linear-gradient(135deg, $card-color-flying, white, $card-color-flying);
+            }
+        
+        }
     }
 }

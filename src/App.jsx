@@ -1,6 +1,6 @@
 import './App.scss';
 import { useState, useEffect } from 'react';
-import ShowPokemon from './components/selectedPokemon';
+import ShowPokemon from './components/ShowPokemon';
 import Pokemon from './components/Pokemon';
 
 

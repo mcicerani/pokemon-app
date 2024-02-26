@@ -1,26 +1,27 @@
 import PropTypes from 'prop-types'
-import './selectedPokemon.scss';
+import './ShowPokemon.scss';
+import StatsBar from './StatsBar';
 
 function ShowPokemon({ selectedPokemon, hidePokemonDetails }) {
 
     return (
-        <div className='pokemon__container' onClick={hidePokemonDetails}>
-            <div className={`pokemonBig ${selectedPokemon?.types[0]}`}>
+        <div className='pokemon__container'>
+            <div className={`pokemonBig ${selectedPokemon?.types.map(type => type).join(' ')}`} onClick={hidePokemonDetails}>
                 <p>#{selectedPokemon?.id}</p>
-                <h2>{selectedPokemon?.name}</h2>
-                <img className='pokemon__foto' src={selectedPokemon?.image} alt={selectedPokemon?.name} />
                 <p>
-                    {selectedPokemon?.types.map((type, index) => (
-                        <img src={`../src/assets/${type}.svg`} alt={type} key={index} className='types' />
-                    ))}
+                {selectedPokemon.types.map((type, index) => (
+                    <img src={`../src/assets/${type}.svg`} alt={type} key={index} className='types' />
+                ))}
                 </p>
-                <p>Types: {selectedPokemon?.types.join(', ')}</p>
+                <img className='pokemon__foto' src={selectedPokemon?.image} alt={selectedPokemon?.name} />
+                <h2>{selectedPokemon?.name}</h2>
+            </div>
+            <div className='pokemon__details'>
+                <p>Type: {selectedPokemon?.types.join(', ')}</p>
                 <p>Height: {selectedPokemon?.height/10}m</p>
                 <p>Weight: {selectedPokemon?.weight/10}kg</p>
                 <p>Abilities: {selectedPokemon?.abilities.join(', ')}</p>
-                {selectedPokemon?.stats.map(stat => (
-                    <p key={stat.name}>{stat.name}: {stat.value}</p>
-                ))}
+                <StatsBar selectedPokemon={selectedPokemon} />
             </div>
         </div>
     );

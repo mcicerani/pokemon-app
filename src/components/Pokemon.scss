@@ -16,61 +16,6 @@
     justify-content: center;
     cursor: pointer;
 
-    &.grass {
-        background-color: $card-color-grass;
-    }
-    &.fire {
-        background-color: $card-color-fire;
-    }
-    &.water {
-        background-color: $card-color-water;
-    }
-    &.bug {
-        background-color: $card-color-bug;
-    }
-    &.normal {
-        background-color: $card-color-normal;
-    }
-    &.poison {
-        background-color: $card-color-poison;
-    }
-    &.electric {
-        background-color: $card-color-electric;
-    }
-    &.ground {
-        background-color: $card-color-ground;
-    }
-    &.fairy {
-        background-color: $card-color-fairy;
-    }
-    &.fighting {
-        background-color: $card-color-fighting;
-    }
-    &.psychic {
-        background-color: $card-color-psychic;
-    }
-    &.rock {
-        background-color: $card-color-rock;
-    }
-    &.ghost {
-        background-color: $card-color-ghost;
-    }
-    &.ice {
-        background-color: $card-color-ice;
-    }
-    &.dragon {
-        background-color: $card-color-dragon;
-    }
-    &.dark {
-        background-color: $card-color-dark;
-    }
-    &.steel {
-        background-color: $card-color-steel;
-    }
-    &.flying {
-        background-color: $card-color-flying;
-    }
-
     p{
         margin: 0.5rem 0;
     }
@@ -84,12 +29,16 @@
         width: 20px;
         height: 20px;
         margin: 0;
+        filter: brightness(0) saturate(100%);
+        opacity: 0.75;
+
     }
 
     .pokemon__foto{
         width: 150px;
         height: 150px;
         margin: 0;
+
     }
 
 }
