@@ -15,8 +15,8 @@ function ShowPokemon({ selectedPokemon, hidePokemonDetails }) {
                     ))}
                 </p>
                 <p>Types: {selectedPokemon?.types.join(', ')}</p>
-                <p>Height: {selectedPokemon?.height}</p>
-                <p>Weight: {selectedPokemon?.weight}</p>
+                <p>Height: {selectedPokemon?.height/10}m</p>
+                <p>Weight: {selectedPokemon?.weight/10}kg</p>
                 <p>Abilities: {selectedPokemon?.abilities.join(', ')}</p>
                 {selectedPokemon?.stats.map(stat => (
                     <p key={stat.name}>{stat.name}: {stat.value}</p>

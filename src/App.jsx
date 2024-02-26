@@ -39,6 +39,7 @@ function App() {
 
   const handlePokemonClick = (pokemon) => {
     setSelectedPokemon(pokemon);
+    console.log(pokemon);
   }
 
   const hidePokemonDetails = () => {
@@ -46,16 +47,16 @@ function App() {
 }
 
 
-    return (
-      <div className="App">
-        {selectedPokemon ? (
-          <ShowPokemon selectedPokemon={selectedPokemon} hidePokemonDetails={hidePokemonDetails}/>
-        ) : (
-          <Pokemon pokemonList={pokemonList} handlePokemonClick={handlePokemonClick} />
-        )}
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      {selectedPokemon ? (
+        <ShowPokemon selectedPokemon={selectedPokemon} hidePokemonDetails={hidePokemonDetails}/>
+      ) : (
+        <Pokemon pokemonList={pokemonList} handlePokemonClick={handlePokemonClick} />
+      )}
+    </div>
+  );
+}
 
 
 

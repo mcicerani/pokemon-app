@@ -1,26 +1,4 @@
-$primary-color: red;
-$secondary-color: white;
-$text-color: black;
-$card-color-grass: #78C850;
-$card-color-fire: #F08030;
-$card-color-water: #6890F0;
-$card-color-bug: #A8B820;
-$card-color-normal: #A8A878;
-$card-color-poison: #A040A0;
-$card-color-electric: #F8D030;
-$card-color-ground: #E0C068;
-$card-color-fairy: #EE99AC;
-$card-color-fighting: #C03028;
-$card-color-psychic: #F85888;
-$card-color-rock: #B8A038;
-$card-color-ghost: #705898;
-$card-color-ice: #98D8D8;
-$card-color-dragon: #7038F8;
-$card-color-dark: #705848;
-$card-color-steel: #B8B8D0;
-$card-color-flying: #A890F0;
-
-
+@import '../src/components/Colors.scss';
 
 .App{
     width: 97vw;
