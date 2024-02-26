@@ -29,9 +29,9 @@ function Header() {
         <React.Fragment>
             <header className="App-header">
                 <h1>
-                    <img src="../public/svgs/pokèball.svg" alt="pokè ball"></img>
+                    <img src="../svgs/pokèball.svg" alt="pokè ball"></img>
                     Pokèdex
-                    <img src="../public/svgs/pokèball.svg" alt="pokè ball"></img>
+                    <img src="../svgs/pokèball.svg" alt="pokè ball"></img>
                 </h1>
             </header>
             <div className='search__wrap'>
