@@ -146,3 +146,38 @@
     text-transform: capitalize;
     font-weight: bold;
 }
+
+
+@media (max-width: 768px){
+    .pokemonBig{
+        width: 250px;
+
+        h2{
+            font-size: 1.5rem;
+        }
+
+        .pokemon__foto{
+            width: 250px;
+            height: 250px;
+        }
+
+        p{
+            font-size: 1rem;
+        }
+
+        .types{
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+        }
+
+    }
+    
+    .pokemon__details{
+        width: 250px;
+        p{
+            width: 200px;
+            font-size: 0.8rem;
+        }
+    }
+}

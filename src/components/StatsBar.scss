@@ -13,3 +13,10 @@
     text-transform: capitalize;
     box-shadow: 1px 1px 5px 1px #000;
 }
+
+@media (max-width: 768px){
+    .stats__container{
+        width: 250px;
+        font-size: 0.8rem;
+    }
+}
