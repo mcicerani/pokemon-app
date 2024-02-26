@@ -12,7 +12,7 @@ function ShowPokemon({ selectedPokemon, hidePokemonDetails }) {
                 <p>#{selectedPokemon?.id}</p>
                 <p>
                 {selectedPokemon.types.map((type, index) => (
-                    <img src={`../src/assets/${type}.svg`} alt={type} key={index} className={`types ${type}`} />
+                    <img src={`../public/svgs/${type}.svg`} alt={type} key={index} className={`types ${type}`} />
                 ))}
                 </p>
                 <img className='pokemon__foto' src={selectedPokemon?.image} alt={selectedPokemon?.name} />

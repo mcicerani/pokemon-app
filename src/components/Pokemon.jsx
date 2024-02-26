@@ -9,7 +9,7 @@ function Pokemon({pokemonList, handlePokemonClick}) {
             <p>#{poke.id}</p>
             <p>
               {poke.types.map((type, index) => (
-                <img src={`../src/assets/${type}.svg`} alt={type} key={index} className={`types ${type}`} />
+                <img src={`../public/svgs/${type}.svg`} alt={type} key={index} className={`types ${type}`} />
               ))}
             </p>
             <img className='pokemon__foto' src={poke.image} alt={poke.name} />
