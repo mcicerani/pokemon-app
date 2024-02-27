@@ -5,7 +5,6 @@
     width: 80vw;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
     align-items: center;
@@ -20,22 +19,32 @@
         font-weight: bold;
     }
 
-    wrap{
-        background-image: url(../svgs/pokèball.svg);
-        background-size: 100px;
-        background-repeat: no-repeat;
-        display: flex;
-        
-        img{
-            width: 100px;
-            height: 100px;
-            position: relative;
-        }
+    img{
+        width: 100px;
+        height: 100px;
+        position: relative;
+
     
     }
     
     .arrow{
         font-size: 3rem;
         opacity: 0.75;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    .evo{
+        img{
+            width: 75px;
+            height: 75px;
+        }
+        p{
+            font-size: 0.75rem;
+        }
+        .arrow{
+            font-size: 2rem;
+        }
     }
 }
