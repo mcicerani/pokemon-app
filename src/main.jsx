@@ -2,13 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Header from './components/Header.jsx'
-import FilterByType from './components/FilterByType.jsx'
 import '../src/main.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header />
-    <FilterByType />
     <App />
   </React.StrictMode>,
 )

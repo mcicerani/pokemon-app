@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { FaSearchPlus } from "react-icons/fa";
 import './Header.scss';
 import React from 'react';
+import FilterByType from './FilterByType.jsx'
+
 
 function Header() {
     const [query, setQuery] = useState('');
@@ -40,6 +42,7 @@ function Header() {
                     <FaSearchPlus />
                 </button>
             </div>
+            <FilterByType />
         </React.Fragment>
     )
 }
