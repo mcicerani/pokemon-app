@@ -13,7 +13,7 @@
     h1{
         font-family: 'Pokemon Solid', sans-serif;
         color: #ffcb05;
-        margin: 0.5rem 0;
+        margin: 0.5rem auto;
         font-size: 4rem;
         text-shadow: -5px 0px 0px #1d2c5e;
     }
@@ -29,17 +29,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 0;
+    margin: 0.5rem auto;
 
     input{
-        width: 60vw;
+        width: 70vw;
         padding: 0.5rem;
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: 1rem;
         background-color: $secondary-color;
         color: $text-color;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
         box-shadow: 1px 1px 5px 1px #000;
     }
 
@@ -48,7 +48,7 @@
         border: none;
         color: white;
         font-size: 1.5rem;
-        margin: 1rem ;
+        margin: 1rem;
 
     }
 
