@@ -1,7 +1,7 @@
 import './App.scss';
 import { useState, useEffect } from 'react';
 import ShowPokemon from './components/ShowPokemon';
-import Pokemon from './components/Pokemon';
+import PokemonList from './components/PokemonList';
 
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
       {selectedPokemon ? (
         <ShowPokemon selectedPokemon={selectedPokemon} hidePokemonDetails={hidePokemonDetails}/>
       ) : (
-        <Pokemon pokemonList={pokemonList} handlePokemonClick={handlePokemonClick} />
+        <PokemonList pokemonList={pokemonList} handlePokemonClick={handlePokemonClick} />
       )}
     </div>
   );

@@ -13,7 +13,7 @@ function ShowPokemon({ selectedPokemon, hidePokemonDetails }) {
         <React.Fragment>
             <div className='pokemon__container'>
                 <div className={`pokemonBig ${selectedPokemon?.types.map(type => type).join(' ')}`} onClick={hidePokemonDetails}>
-                    <p>#{selectedPokemon?.id}</p>
+                    <p>#{selectedPokemon?.id.toString().padStart(3, '0')}</p>
                     <p>
                     {selectedPokemon.types.map((type, index) => (
                         <img src={`../svgs/${type}.svg`} alt={type} key={index} className={`types ${type}`} />

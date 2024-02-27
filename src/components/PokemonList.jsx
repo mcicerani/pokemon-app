@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
-import './Pokemon.scss'
+import './PokemonList.scss'
 
-function Pokemon({pokemonList, handlePokemonClick}) {
+function PokemonList({pokemonList, handlePokemonClick}) {
     return (
         <div className='pokemon__container'>
         {pokemonList.map(poke => (
             <div className={`pokemon ${poke.types.map(type => type).join(' ')}`} id={poke.name} key={poke.id} onClick={() => handlePokemonClick(poke)}>
-            <p>#{poke.id}</p>
+            <p>#{poke.id.toString().padStart(3, '0')}</p>
             <p>
               {poke.types.map((type, index) => (
                 <img src={`../svgs/${type}.svg`} alt={type} key={index} className={`types ${type}`} />
@@ -20,7 +20,7 @@ function Pokemon({pokemonList, handlePokemonClick}) {
     );
 }   
 
-Pokemon.propTypes = {
+PokemonList.propTypes = {
     pokemonList: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number,
@@ -32,4 +32,4 @@ Pokemon.propTypes = {
     handlePokemonClick: PropTypes.func.isRequired,
 };
 
-export default Pokemon;
+export default PokemonList;
