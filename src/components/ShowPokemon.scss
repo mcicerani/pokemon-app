@@ -155,8 +155,9 @@
 
 @media (max-width: 768px){
     .pokemonBig{
-        width: 250px;
+        width: 300px;
         height: auto;
+        align-items: center;
 
         h2{
             font-size: 1.5rem;
@@ -180,7 +181,7 @@
     }
     
     .pokemon__details{
-        width: 250px;
+        width: 300px;
         p{
             width: 200px;
             font-size: 0.8rem;
