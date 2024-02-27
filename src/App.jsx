@@ -40,7 +40,6 @@ function App() {
 
   const handlePokemonClick = (pokemon) => {
     setSelectedPokemon(pokemon);
-    console.log(pokemon);
   }
 
   const hidePokemonDetails = () => {
