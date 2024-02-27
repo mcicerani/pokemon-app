@@ -1,0 +1,78 @@
+@import 'Colors.scss';
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width:90vw;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+
+    .types{
+        padding: 0.5rem;
+        margin: 0.25rem;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        color: white;
+        background:black;
+
+        &.bug{
+            background: $card-color-bug;
+        }
+        &.dragon{
+            background: $card-color-dragon;
+        }
+        &.electric{
+            background: $card-color-electric;
+        }
+        &.fairy{
+            background: $card-color-fairy;
+        }
+        &.fighting{
+            background: $card-color-fighting;
+        }
+        &.fire{
+            background: $card-color-fire;
+        }
+        &.flying{
+            background: $card-color-flying;
+        }
+        &.ghost{
+            background: $card-color-ghost;
+        }
+        &.grass{
+            background: $card-color-grass;
+        }
+        &.ground{
+            background: $card-color-ground;
+        }
+        &.ice{
+            background: $card-color-ice;
+        }
+        &.normal{
+            background: $card-color-normal;
+        }
+        &.poison{
+            background: $card-color-poison;
+        }
+        &.psychic{
+            background: $card-color-psychic;
+        }
+        &.rock{
+            background: $card-color-rock;
+        }
+        &.steel{
+            background: $card-color-steel;
+        }
+        &.water{
+            background: $card-color-water;
+        }
+
+
+    }
+}

@@ -8,7 +8,7 @@
     padding: 1rem;
     border: 1px solid #ccc;
     color: $text-color;
-    width: 200px;
+    width: 150px;
     height: 200px;
     border-radius: 5%;
     box-shadow: 1px 1px 5px 1px #000;
@@ -122,12 +122,13 @@
 @media screen and (max-width: 768px){
 
     .pokemon{
-        width: 130px;
-        height: 130px;
+
+        width: 100px;
+        height: 150px;
 
         .pokemon__foto{
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
         }
 
         p{
