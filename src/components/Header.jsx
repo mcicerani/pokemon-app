@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { FaSearchPlus } from "react-icons/fa";
 import './Header.scss';
 import React from 'react';
 import FilterByType from './FilterByType.jsx'
@@ -38,9 +37,6 @@ function Header() {
             </header>
             <div className='search__wrap'>
                 <input name='Pokemon_search' type='text' placeholder='Search Pokemon' onChange={handleChange} />
-                <button>
-                    <FaSearchPlus />
-                </button>
             </div>
             <FilterByType />
         </React.Fragment>
