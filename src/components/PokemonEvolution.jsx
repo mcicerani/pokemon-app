@@ -2,9 +2,13 @@ import Proptype from 'prop-types';
 import { useState, useEffect } from 'react';
 import './PokemonEvolution.scss';
 import { TiArrowRightThick } from "react-icons/ti";
+import LoadingScreen from './LoadingScreen';
 
 
 const PokemonEvolution = ({ species }) => {
+
+    const [isLoading, setIsLoading] = useState(true);
+
     const [firstEvolution, setFirstEvolution] = useState({
         name: '',
         imageUrl: ''
@@ -48,10 +52,14 @@ const PokemonEvolution = ({ species }) => {
                                 }));
                             }
                         }
+                        setIsLoading(false);
                     });
             });
     }, [species]);
 
+    if (isLoading) {
+        return <LoadingScreen/>;
+    }
 
     return (
         <div className='evo'>
